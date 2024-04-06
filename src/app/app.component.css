@@ -1,0 +1,15 @@
+.header {
+  text-align: center;
+  margin-bottom: 20px; /* Espacio entre el encabezado y el menú */
+}
+
+.header h1 {
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-style: italic;
+  color: #666;
+}
+
+/* Estilos anteriores para el menú y el logo */

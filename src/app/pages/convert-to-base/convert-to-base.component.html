@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Convertir a Base</h2>
+  
+  <div class="input-group">
+    <label for="numberInput">Número:</label>
+    <input type="number" id="numberInput" [(ngModel)]="number">
+  </div>
+  
+  <div class="input-group">
+    <label for="baseInput">Base:</label>
+    <input type="number" id="baseInput" [(ngModel)]="base">
+  </div>
+  
+  <button class="convert-button" (click)="converDeBase()">Convertir</button>
+
+  <table class="steps-table" *ngIf="steps.length > 0" border="1">
+    <thead>
+      <tr>
+        <th>Paso</th>
+        <th>Cociente</th>
+        <th>Residuo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let step of steps; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ step.quotient }}</td>
+        <td>{{ step.remainder }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="result" class="result-text">El número {{ number }} en base {{ base }} es: {{ result }}</p>
+</div>

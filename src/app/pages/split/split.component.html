@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>División de Números</h2>
+  
+  <div class="input-group">
+    <label for="dividendInput">Dividendo:</label>
+    <input type="number" id="dividendInput" [(ngModel)]="dividend">
+  </div>
+  
+  <div class="input-group">
+    <label for="divisorInput">Divisor:</label>
+    <input type="number" id="divisorInput" [(ngModel)]="divisor">
+  </div>
+  
+  <button class="divide-button" (click)="divideNumbers()">Dividir</button>
+
+
+  <p *ngIf="results" class="result-text">El resultado de {{ dividend }} ÷ {{ divisor }} es: {{ results }}</p>
+</div>
